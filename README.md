@@ -3,10 +3,9 @@
 
 This is a implementaation of [Schelling model of Segragation](https://en.wikipedia.org/wiki/Schelling%27s_model_of_segregation).
 
-We all love to be at our homes but have you ever why our parents or grandparents choose to live where they live? If you give it a thought then you will realise they probably choose to live in that area because of some kind of similarity with neighbours(religion , ethinicity etc).  During one of the survey in major US metropolitan area, black residents were asked if they preferred to live in all-black, all-white or half-black/half-white areas, around 55% of people those surveyed stated preference for half-black/half white neighbourhoods. However, the census data reveals very small percent of black individuals(5%) in US metropolitan areas actually live in half-black/half-white neighbourhoods[1]. This was quite puzzeling until Schelling came up with a model for residential segregation. One of the earliest work in understanding the residential dynamics was given by Thomas C. Schelling in 1978.  Schelling’s model illustrates how  mild individual preferance regarding selectivity in neighbours can lead to segregation among population. 
+We all love to be at our homes but have you ever why our parents or grandparents choose to live where they live? If you give it a thought then you will realise they probably choose to live in that area because of some kind of similarity with neighbours(religion , ethinicity etc).  During one of the survey in major US metropolitan area, black residents were asked if they preferred to live in all-black, all-white or half-black/half-white areas, around 55% of people those surveyed stated preference for half-black/half white neighbourhoods. However, the census data reveals very small percent of black individuals(5%) in US metropolitan areas actually live in half-black/half-white neighbourhoods[1]. This was quite puzzeling until Schelling came up with a model for residential segregation. One of the earliest work in understanding the residential dynamics was given by Thomas C. Schelling in 1978[2].  Schelling’s model illustrates how  mild individual preferance regarding selectivity in neighbours can lead to segregation among population. 
 
-Lets try to understand the original Schelling model of segregation of social segregation. Consider, two different types(say A and B) of people living in a regular suquare lattice. The individuals aims to reside within a neighbourhood where fraction of “friends” or “similar type of individual” is sufficiently high, above a predefined threshold value (H).  Let me give you an example, Suppose an individual(red) lives around the center of square lattice such that it will have eight neighbours(in black) around him as shown below.
-
+Lets try to understand the original Schelling model of segregation of social segregation. Consider, two different types(say A and B) of people living in a regular suquare lattice. The individuals aims to reside within a neighbourhood where fraction of “friends” or “similar type of individual” is sufficiently high, above a predefined threshold value (H).  Let me give you an example, Suppose an individual(red) lives around the center of square lattice such that it will have eight neighbours(in black) around him as shown below ![Neighbourhood](fig_1.png).
 
 
 
@@ -19,18 +18,9 @@ Here, I first considered a square grid of 105X105. This square grid has density 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 Now, each individual is checked if his fraction for being happy(here its 0.5) is fulfilled or not, if any individual is unhappy then he randomly goes to empty spot somewhere and leaves a vacant space behind. All the individuals are updates according to this simple rule. And after each updation we see that number of people who are happy increases and number of people who are unhappy decreases. Subsequently, A pattern of segregation emerges in the square grid where we can see the clusters of similar individuals living around each other. ![Illustration 2](final.png).
+
+![Variation of individual's satisfaction](Variation.png).
 
 Relevance of Schelling model of segregation
 
@@ -41,12 +31,6 @@ Despite the simplicity of the model, the large scale effects of individual prefe
 
 [1] Davis, J. A., & Smith, T. W. (1999). General social surveys, 1972-1998: Cumulative codebook.
 Chicago: National Opinion Research Center.
+[2]Schelling, T. C. (1978). Micromotives and macrobehavior. New York/London: W. W. Norton.
+Article reference:[Schelling’s Model: A Success for Simplicity](https://link.springer.com/chapter/10.1007/978-3-319-72408-9_7)
 
-By tweaking the branching angle, we can generate patterns such as the [H-tree](https://en.wikipedia.org/wiki/H_tree).
-Here, the new and old branches are perpendicular, and are scaled down by a factor of 1/√2.
-
-![H-tree](H-tree.png)
-
-Many structures in nature resemble fractal canopies, such as systems of blood vessels or bronchioles in a lung.
-[Lichtenberg figures](https://en.wikipedia.org/wiki/Lichtenberg_figure) are a closely related class of fractals which are observed during electrical breakdown, for instance lightning.
-Another related class are [Brownian trees](https://en.wikipedia.org/wiki/Brownian_tree), which are seen during certain types of random walks where particles are allowed to aggregate together.
